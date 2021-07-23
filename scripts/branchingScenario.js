@@ -1,6 +1,7 @@
 H5P = H5P || {};
 
 H5P.BranchingScenario = function (params, contentId) {
+
   const self = this;
 
   H5P.EventDispatcher.call(self);
@@ -314,7 +315,7 @@ H5P.BranchingScenario = function (params, contentId) {
 
     if (nextLibrary === false) {
       //  Show the relevant end screen if there is no next library
-      self.currentEndScreen = self.endScreens[id];
+      self.currentEndScreen = self.endScreens[-1];
       // Custom end screen
       if (e.data.feedback) {
         const endScreen = createEndScreen({
